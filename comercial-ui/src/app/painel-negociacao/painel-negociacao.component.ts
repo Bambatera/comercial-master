@@ -27,26 +27,69 @@ export class PainelNegociacaoComponent implements OnInit {
 		);
 	}
 
-	public adicionar() {
-		this.oportunidadeService.adicionar(this.oportunidade).subscribe(() => {
+	public alterar(oprtnd: any) {
+		this.oportunidade = oprtnd;
+	}
+
+	public remover(id: number) {
+		this.oportunidadeService.remover(id).subscribe(() => {
 			this.messageService.add({
 				severity: "success",
-				summary: "Oportunidade adicionada com sucesso!"
+				summary: "Oportunidade excluída com sucesso!"
 			});
 			
-			this.oportunidade = {};
+			this.limpar();
 			this.consultar();
-		}, onError => {
-			let msgError = "Erro inesperado. Contate o suporte técnico!"
-			
-			if (onError.error.message) {
-				msgError = onError.error.message;
-			}
-
-			this.messageService.add({
-				severity: "error",
-				summary: msgError
-			});
 		});
+	}
+
+	public limpar() {
+		this.oportunidade = {}
+	}
+
+	public salvar() {
+		if (this.oportunidade.id) {
+			this.oportunidadeService.alterar(this.oportunidade).subscribe(() => {
+				this.messageService.add({
+					severity: "success",
+					summary: "Oportunidade alterada com sucesso!"
+				});
+				
+				this.limpar();
+				this.consultar();
+			}, onError => {
+				let msgError = "Erro inesperado. Contate o suporte técnico!"
+				
+				if (onError.error.message) {
+					msgError = onError.error.message;
+				}
+	
+				this.messageService.add({
+					severity: "error",
+					summary: msgError
+				});
+			});
+		} else {
+			this.oportunidadeService.adicionar(this.oportunidade).subscribe(() => {
+				this.messageService.add({
+					severity: "success",
+					summary: "Oportunidade adicionada com sucesso!"
+				});
+				
+				this.limpar
+				this.consultar();
+			}, onError => {
+				let msgError = "Erro inesperado. Contate o suporte técnico!"
+				
+				if (onError.error.message) {
+					msgError = onError.error.message;
+				}
+	
+				this.messageService.add({
+					severity: "error",
+					summary: msgError
+				});
+			});
+		}
 	}
 }
