@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,12 +24,11 @@ import { PainelNegociacaoComponent } from './painel-negociacao/painel-negociacao
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-
     TableModule,
     PanelModule,
     InputTextModule,
     ButtonModule,
-    ToastModule,
+    ToastModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
