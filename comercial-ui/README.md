@@ -1,4 +1,4 @@
-# Frontend (WSFSAS)
+# Frontend (Comercial Master)
 
 Este projeto foi desenvolvido em Angular 15 com [PrimeNG 15](https://www.primefaces.org/primeng/setup).
 

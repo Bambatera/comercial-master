@@ -1,4 +1,4 @@
-# Backend (WSFSAS)
+# Backend (Comercial Master)
 
 Este projeto foi desenvolvido em Java 17 com Spring-Boot 3.0.0 e foi criado a partir do [Spring Initializr](https://start.spring.io/)
 
