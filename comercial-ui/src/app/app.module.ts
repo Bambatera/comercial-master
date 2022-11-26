@@ -1,8 +1,10 @@
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { registerLocaleData } from '@angular/common';
+import ptBr from '@angular/common/locales/pt';
 
 import { TableModule } from 'primeng/table';
 import { PanelModule } from 'primeng/panel';
@@ -14,24 +16,28 @@ import { MessageService } from 'primeng/api';
 import { AppComponent } from './app.component';
 import { PainelNegociacaoComponent } from './painel-negociacao/painel-negociacao.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    PainelNegociacaoComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
+registerLocaleData(ptBr);
 
-    TableModule,
-    PanelModule,
-    InputTextModule,
-    ButtonModule,
-    ToastModule,
-  ],
-  providers: [MessageService],
-  bootstrap: [AppComponent]
+@NgModule({
+	declarations: [
+		AppComponent,
+		PainelNegociacaoComponent
+	],
+	imports: [
+		BrowserModule,
+		BrowserAnimationsModule,
+		FormsModule,
+		HttpClientModule,
+		TableModule,
+		PanelModule,
+		InputTextModule,
+		ButtonModule,
+		ToastModule
+	],
+	providers: [
+		MessageService,
+		{ provide: LOCALE_ID, useValue: 'pt' }
+	],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

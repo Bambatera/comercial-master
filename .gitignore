@@ -1,2 +1,83 @@
-.metadata/*
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### comercial-ui ###
+/comercial-ui/logs
+/comercial-ui/*.log
+/comercial-ui/npm-debug.log*
+/comercial-ui/yarn-debug.log*
+/comercial-ui/yarn-error.log*
+/comercial-ui/pnpm-debug.log*
+/comercial-ui/lerna-debug.log*
+
+/comercial-ui/node_modules
+/comercial-ui/dist
+/comercial-ui/dist-ssr
+/comercial-ui/*.local
+
+### comercial-api ###
+/comercial-api/nbproject/private/
+/comercial-api/nbbuild/
+/comercial-api/dist/
+/comercial-api/nbdist/
+//comercial-api.nb-gradle/
+/comercial-api/build/
+/comercial-api!**/src/main/**/build/
+/comercial-api!**/src/test/**/build/
+/comercial-api/nb*.xml
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+!.vscode/extensions.json
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+.idea
 .DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
