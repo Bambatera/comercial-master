@@ -4,6 +4,12 @@ Este projeto foi desenvolvido em Java 17 com Spring-Boot 3.0.0 e foi criado a pa
 
 ![comercial-api](./src/main/resources/static/comercial-api.png)
 
+## Ferramentas utilizadas
+
+* NetBeans 15 (com a extensão)
+  * NB SpringBoot
+* Postman (para testar os serviços REST da API)
+
 ## Dependências utilizadas
 
 * Spring Boot DevTools
